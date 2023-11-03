@@ -17,37 +17,63 @@ body{
     text-align: center;
     padding: 0;
 }
-
+/* 
 h1{
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
     line-height: px ;
-}
+} */
 button{
+    position: absolute;
     width: 90%;
-    height: 500px;
-    background-color: white;
-  color: black;
+    height: 80px;
   border: 2px none;
   border-radius: 50%;
+    left: 5%;
+    top: 60%;
+    
     background: radial-gradient(circle, rgba(217,255,20,1) 20%, rgba(196,255,0,0) 75%);
-    font-size: 50px;
+    font-size: 40px;
+    
 }
+a:link{
+    text-decoration: none;
+}
+/* .pj_enter{
+    position: absolute;
+    font-size: 40px;
+    text-shadow: #0fa;
+    left: 40%;
+    top: 60%;
+    color: rgb(234, 255, 0);
+} */
+
+/* .pj_enter:hover{
+    filter: blur(30);
+    background-color: #0fa;
+    border-radius: 50%;
+    animation: enterAnim 2s ;
+} */
+
+/* @keyframes enterAnim {
+    from {background-color: red 0;}
+    to {background-color: yellow 100;}
+  } */
+
+
+
+@keyframes enterAnim{
+    100%{box-shadow: 0 0 50px 15px #eeff00; filter: blur(10px);
+    }
+}
+
 button:hover{
-    font-family:'Times New Roman', Times, serif;
-    text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px #0fa,
-    0 0 82px #0fa,
-    0 0 92px #0fa,
-    0 0 102px #0fa,
-    0 0 151px #0fa;
+    animation: enterAnim 0.5s linear;    
 }
+
 .portal{
     position: inherit;
-    width: 300px;
+    width: 250px;
 }
 .c3{
     transform: scaleX(-1);
@@ -85,7 +111,6 @@ button:hover{
     0%{transform: rotate(0deg);}
     100%{transform: rotate(-720deg);}
 }
-
 
 
 /*---------map-----------*/
@@ -395,6 +420,11 @@ p{
     height: 300px;
     top: 30%;
     left: 2.5%;
+
+    border-radius: 50%;
+    background-color: yellow;
+    filter: blur(30);
+
 }
 .museum_s1{
     position: absolute;
@@ -430,7 +460,31 @@ p{
     100%{transform: scale(1.25);}
 }
 
+.cot_chua{
+    position: absolute;
+    width: 80px;
+    height: 120%;
+    top: -5%;
+    left: 20%;
+    background: linear-gradient(90deg, rgba(85,80,16,1) 0%, rgba(223,255,53,1) 50%, rgba(67,223,16,1) 100%);
+}
 
+.cot_chua_2{
+    position: absolute;
+    width: 80px;
+    height: 120%;
+    top: -5%;
+    left: 55%;
+    background: linear-gradient(90deg, rgba(85,80,16,1) 0%, rgba(223,255,53,1) 50%, rgba(67,223,16,1) 100%);
+}
+.cot_chua_3{
+    position: absolute;
+    width: 80px;
+    height: 120%;
+    top:-5%;
+    left: 90%;
+    background: linear-gradient(90deg, rgba(85,80,16,1) 0%, rgba(223,255,53,1) 50%, rgba(67,223,16,1) 100%);
+}
 
 /*---------museum----------*/
 
@@ -474,7 +528,75 @@ audio{
     position: absolute;
     bottom: 5%;
     left: 5%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px yellow;
 }
+
+audio::-webkit-media-controls-panel {
+    background-color: yellow;
+
+  }
+
+.au_instruction{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: yellow;
+    text-shadow: 0px 0px 10px rgb(25, 0, 255);
+  }
+
+  .au_title{
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    color: yellow;
+    text-shadow: 0px 0px 10px rgb(25, 0, 255);
+    background-color: blue;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px blue;
+    rotate: 20deg;
+
+  }
+  .au_lyrics{
+    position: absolute;
+    bottom: 50%;
+    left: 60%;
+    width: 100px;
+    height: 50px;
+    overflow: auto;
+
+    color: hotpink;
+    text-shadow: 0px 0px 10px rgb(25, 0, 255);
+  }
+
+  .au_title_swamp{
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    color: yellow;
+    text-shadow: 0px 0px 10px rgb(25, 0, 255);
+    background-color: blue;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px blue;
+    rotate: 120deg;
+
+  }
+  .au_lyrics_swamp{
+    position: absolute;
+    bottom: 50%;
+    left: 60%;
+    width: 100px;
+    height: 50px;
+    overflow: auto;
+
+    color: hotpink;
+    text-shadow: 0px 0px 10px rgb(25, 0, 255);
+  }
+
+  .thesketch{
+    z-index: 200;
+  }
+    
 
 .sketch02draw{
     position: absolute;
@@ -482,3 +604,32 @@ audio{
     height: 100vh;
     z-index: 100;
 }
+/* LOADING SCREEN */
+.loader {
+    position: absolute;
+    border: 16px solid #e600ff; /* Light grey */
+    border-top: 16px solid #f2ff00; /* Blue */
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px #e600ff;
+    width: 100px;
+    height: 100px;
+    left: 45%;
+    top: 40%;
+    animation: spin 1.2s infinite;
+    z-index: -100;
+
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  /* LOADING SCREEN */
+
+  .welcome_instruction{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    color: yellow;
+    text-shadow: 0px 0px 10px rgb(25, 0, 255);
+  }

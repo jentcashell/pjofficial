@@ -5,6 +5,7 @@
 
 let img01, img02, img03, img04, img05,img06;
 let sound01, sound02, sound03, sound04, sound05, sound06;
+let theSong;
 let soundList = [];
 
 let imgArray;
@@ -42,6 +43,8 @@ function preload() {
   sound04 = loadSound("sketch01/sound05.mp3");
   sound05 = loadSound("sketch01/sound06.mp3");
   sound06 = loadSound("sketch01/sound07.wav");
+
+  theSong = loadSound("sketch01//muonlamcongian.mp3");
 }
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -63,6 +66,13 @@ function setup() {
   
   spacingX = width / repX;
   spacingY = height / repY;
+
+  theSong.loop();
+  // create a new Amplitude analyzer
+  analyzer = new p5.Amplitude();
+
+  // Patch the input to an volume analyzer
+  analyzer.setInput(theSong);
 }
 
 function draw() {
@@ -70,6 +80,9 @@ function draw() {
   clear(50,50);
   h = random(0, 100);
   
+  // Get the average (root mean square) amplitude
+  let rms = analyzer.getLevel();
+  console.log(rms);
   
   //TEXT - INSTRUCTION
   textSize(30);
@@ -110,7 +123,7 @@ function draw() {
       rotate(r);
       //frameRate(20);
       //tint(random(30,80),70,100,90);
-      image(img05, 0, 0, s * 0.5, s * 0.5);
+      image(img05, 0, 0, s, s);
       repY = repMult;
       //repX = repMult;
        pop();

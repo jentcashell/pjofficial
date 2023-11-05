@@ -1,3 +1,18 @@
+.labsketch{
+    position: absolute;
+    width: 800px;
+    height: 800px;    
+}
+
+/* canvas{
+    display: block;
+    padding: 100px;
+    object-fit: contain;
+    object-position: 50% 50%;
+    transform: scale(1);
+
+} */
+
 body{
     background-image: url(images/organalienbg.png);
     background-size: 300px;
@@ -23,7 +38,7 @@ h1{
     font-size: 50px;
     line-height: px ;
 } */
-button{
+.pj_enter{
     position: absolute;
     width: 90%;
     height: 80px;
@@ -192,6 +207,11 @@ p{
 .img06{
     top: 15%;
     left: 70%;
+}
+
+.img07{
+    top: 15%;
+    left: 60%;
 }
 .building:hover{
     transform: scale(120%);
@@ -630,6 +650,16 @@ audio::-webkit-media-controls-panel {
     position: absolute;
     top: 50%;
     left: 60%;
+    color: yellow;
+    text-shadow: 0px 0px 10px rgb(25, 0, 255);
+  }
+
+
+  .lab_instruction{
+    position: absolute;
+    width: 300px;
+    top: 20%;
+    left: 850px;
     color: yellow;
     text-shadow: 0px 0px 10px rgb(25, 0, 255);
   }

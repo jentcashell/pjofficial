@@ -59,6 +59,18 @@ function setup() {
   
   spacingX = width / rep;
   spacingY = height / rep;
+
+  const button = createButton("Clear");
+  button.position(380, height - 85);
+  button.style("background-color", "blue"); // Set the background color to blue
+  button.style("font-size", "16px");
+  button.style("color", "white");
+  button.style("border-radius", "50%");
+  button.style("padding", "10px 20px");
+  button.style("box-shadow", "0 0 30px 20px rgba(0, 0, 255)");
+  button.style("border", "none");
+
+  button.mousePressed(clearCanvas);
 }
 
 function draw() {
@@ -125,4 +137,9 @@ function draw() {
 //     soundsRandom.stop();
 //     noTint();
 //   }
+}
+
+function clearCanvas(){
+  clear();
+  
 }

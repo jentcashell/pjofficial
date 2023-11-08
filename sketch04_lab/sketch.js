@@ -74,9 +74,10 @@ function setup() {
   legs = [leg1, leg2, leg3];
   legArray = floor(random(0, 1));
   
-  fill(230, 230, 0);
-  noStroke();
-  rect (width/2, height/2, 600,600);
+  image(pjlabframe, width/2,height/2, 800,800);
+  // fill(230, 230, 0);
+  // noStroke();
+  // rect (width/2, height/2, 600,600);
   //image(pjlogo, width - 200, height - 170, 150, 75);
   image(pjlabframe, width/2,height/2, 800,800);
   image(pjlogo, width - 200, height - 170, 150, 75);
@@ -109,9 +110,11 @@ function setup() {
 }
 
 function resetSketch() {
-  fill(230, 230, 0);
-  noStroke();
-  rect (width/2, height/2, 600,600);
+  clear();
+  image(pjlabframe, width/2,height/2, 800,800);
+  // fill(230, 230, 0);
+  // noStroke();
+  // rect (width/2, height/2, 600,600);
 
 
   push();
@@ -150,7 +153,7 @@ function resetSketch() {
   pop();
 
   
-  image(pjlabframe, width/2,height/2, 800,800);
+  
   image(pjlogo, width - 200, height - 170, 150, 75);
 }
 

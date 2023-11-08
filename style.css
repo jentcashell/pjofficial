@@ -13,6 +13,13 @@
 
 } */
 
+::selection{
+     color: yellow;
+     background:rgb(25, 0, 255);
+     text-shadow: 0 0 20px #fff;
+     /* filter: blur(5px); */
+}
+
 body{
     background-image: url(images/organalienbg.png);
     background-size: 300px;
@@ -32,12 +39,16 @@ body{
     text-align: center;
     padding: 0;
 }
-/* 
+
 h1{
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
-    line-height: px ;
-} */
+    text-shadow: 0 0 50px #fff;
+    /* background-color:rgba(255, 255, 255, 0.764); */
+    /* width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.705); */
+}
 .pj_enter{
     position: absolute;
     width: 90%;
@@ -210,7 +221,7 @@ p{
 }
 
 .img07{
-    top: 15%;
+    top: 50%;
     left: 60%;
 }
 .building:hover{
@@ -369,13 +380,22 @@ p{
     /* top: 50%;
     left: 50%; 
     transform: translate(-50%, 0%);*/
-    background:  radial-gradient(circle, rgba(233,253,45,1) 0%, rgba(82,34,195,0) 100%);
+   
 }
 .m_frame{
+    position: absolute;
+    width: 60%;
+    height: 120%;
+    top: -12%;
+    background:  radial-gradient(circle, rgba(233,253,45,1) 0%, rgba(82,34,195,0) 100%);
+}
+
+.m_frame_his{
     position: absolute;
     width: 100%;
     height: 120%;
     top: -12%;
+    background:  radial-gradient(circle, rgba(233,253,45,1) 0%, rgba(82,34,195,0) 100%);
 }
 .pmu_01{
     position: inherit;
@@ -396,6 +416,7 @@ p{
 .mu_column {
     flex: 50%;
     padding: 5%;
+    overflow: auto;
 }
 
 .mc1{
@@ -404,19 +425,53 @@ p{
 
 .pmu_02_specimen{
     position: relative;
-    top: 30%;
+    top: 0%;
     text-align: left;
-    font-size:30px;
+    font-size: 30px;
+    background-image: url("images/pjmuseum_frame01.png");
+    background-size: 450px 100px;
+    background-repeat:no-repeat;
+    width: 400px;
+    height: 75px;
+    padding-left: 80px;
+    padding-top: 30px;
 }
 .pmu_02{
     position: relative;
-    top: 30%;
-    width: 60%;
+    top: 0%;
+    width: 200px;
     height: 300px;
     text-align: left;
     font: 12px;
-    
     overflow: auto;
+    
+    background-image: url("images/pjmuseum_frame02.png");
+    background-size: 450px 450px;
+    background-repeat:no-repeat;
+    width: 300px;
+    height: 500px;
+    padding-left: 100px;
+    padding-right: 120px;
+    padding-top: 110px;
+}
+
+
+
+.muFrame01{
+    position: absolute;
+    width: 450px;
+    height: 100px;
+    transform: translate(-80px,-70px);
+
+
+}
+.muFrame02{
+    position: absolute;
+    width: 450px;
+    height: 350px;
+    transform: translate(-80px,0);
+   
+
 }
 .mu_char{
     position: relative;
@@ -424,10 +479,18 @@ p{
 .spec02{
     position: relative;
     width: 300px;
-    top: 30%;
-    left: 50%;
+    top: 15%;
+    left: 20%;
 
 }
+.spec02_02{
+    position: relative;
+    width: 300px;
+    top: -10%;
+    left: 50%;
+    filter: hue-rotate(30);
+}
+
 /*---------museum all----------*/
 .museum_all{
     position: absolute;
@@ -439,19 +502,17 @@ p{
     width: 300px;
     height: 300px;
     top: 30%;
-    left: 2.5%;
-
-    border-radius: 50%;
-    background-color: yellow;
-    filter: blur(30);
-
+    left: 11.5%;
+    /* background:  radial-gradient(circle, rgba(233,253,45,1) 0%, rgba(82,34,195,0) 100%); */
 }
+
+
 .museum_s1{
     position: absolute;
     width: 300px;
     height: 300px;
     top: 20%;
-    left: 25%;
+    left: 30%;
 
 }
 .museum_s2{
@@ -460,14 +521,15 @@ p{
     height: 300px;
     top: 20%;
     left: 50%;
-    
 }
+
+
 .museum_s3{
     position: absolute;
     width: 300px;
     height: 300px;
     top: 20%;
-    left: 75%;
+    left: 70%;
     
 }
 
@@ -480,12 +542,31 @@ p{
     100%{transform: scale(1.25);}
 }
 
+.mGlow{
+    transform: translate(155px,50%);
+    width: 10px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: yellow;
+    box-shadow:0 0 100px 120px #eeff00;
+}
+
+
+.mAnim2:hover{
+    animation: museumAnim2 0.5s;
+}
+
+@keyframes museumAnim2{
+    0%{height: 300px;}
+    100%{height: 600px;}
+}
+
 .cot_chua{
     position: absolute;
     width: 80px;
     height: 120%;
     top: -5%;
-    left: 20%;
+    left: 5%;
     background: linear-gradient(90deg, rgba(85,80,16,1) 0%, rgba(223,255,53,1) 50%, rgba(67,223,16,1) 100%);
 }
 
@@ -561,10 +642,27 @@ audio::-webkit-media-controls-panel {
     position: absolute;
     top: 5%;
     left: 5%;
-    color: yellow;
+    color: rgb(0, 26, 255);
     text-shadow: 0px 0px 10px rgb(25, 0, 255);
+    background-image: url("images/pjmuseum_frame01.png");
+
+    background-size: 450px 200px;
+    background-repeat:no-repeat;
+    width: 280px;
+    height: 200px;
+    padding-left: 100px;
+    padding-right: 150px;
+    padding-top: 70px;
   }
 
+  .sgk{
+    background-size: 450px 300px;
+    width: 250px;
+    height: 300px;
+    padding-left: 100px;
+    padding-right: 150px;
+    padding-top: 100px;
+}
   .au_title{
     position: absolute;
     bottom: 15%;
@@ -658,8 +756,78 @@ audio::-webkit-media-controls-panel {
   .lab_instruction{
     position: absolute;
     width: 300px;
-    top: 20%;
+    top: 15%;
     left: 850px;
-    color: yellow;
+    color: rgb(38, 0, 255);
     text-shadow: 0px 0px 10px rgb(25, 0, 255);
+    background-image: url("images/pjmuseum_frame01.png");
+
+    background-size: 450px 300px;
+    background-repeat:no-repeat;
+    width: 280px;
+    height: 200px;
+    padding-left: 100px;
+    padding-right: 150px;
+    padding-top: 100px;
   }
+  .lab_img{
+    position: absolute;
+    width: 300px;
+    left: 60%;
+    top: 50%;
+}
+
+  .scrollable-content::-webkit-scrollbar-thumb {
+    background-image: url("images/cockroach_icon.png");
+    background-size: cover;
+  }
+  .scrollable-content::-webkit-scrollbar-track {
+    background-color: #ff0000;
+}
+
+.earth{
+    position: absolute;
+    width: 100px;
+    top: 5%;
+    right: 5%;
+}
+
+.earth_vid{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    top: 10%;
+    left: 30%;
+    background: url(jentian_on_earth.gif);
+    background-size: cover;
+    transform: scaleX(1.5);
+}
+
+.e02{
+    width: 300px;
+    height: 800px;
+    top: 20%;
+    left: 30%;
+
+    background-size: cover;
+    transform: scaleX(0.8);
+}
+.e03{
+    width: 500px;
+    height: 100%;
+    top: 0%;
+    left: 70%;
+
+    background-size: cover;
+    transform: scaleX(1);
+}
+
+.e04{
+    width: 500px;
+    height: 100%;
+    top: 0%;
+    left: 70%;
+
+    background-size: cover;
+    transform: scaleX(6);
+}

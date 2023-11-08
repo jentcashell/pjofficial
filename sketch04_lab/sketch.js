@@ -159,5 +159,5 @@ function resetSketch() {
 
 function saveCanvasAsImage() {
   // Save the canvas as an image when the download button is clicked
-  saveCanvas("your_sketch", "png");
+  saveCanvas("jentian_lab", "png");
 }

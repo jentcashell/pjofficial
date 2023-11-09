@@ -38,12 +38,14 @@ function preload() {
 
   limb1 = loadImage("images/pjlab_arm01.png");
   limb2 = loadImage("images/pjlab_arm02.png");
+  limb3 = loadImage("images/alienpiece01.png");
 
   body1 = loadImage("images/pjlab_body03.png");
   body2 = loadImage("images/pjlab_body02.png");
 
   limbL1 = loadImage("images/pjlab_arml01.png");
   limbL2 = loadImage("images/pjlab_arml02.png");
+  limbL3 = loadImage("images/alienpiece01b.png");
 
   leg1 = loadImage("images/pjlab_leg01.png");
   leg2 = loadImage("images/pjlab_leg02.png");
@@ -62,13 +64,13 @@ function setup() {
   heads = [head1, head2, head3, head4, head5];
   headArray = floor(random(0, 1));
 
-  limbs = [limb1, limb2];
+  limbs = [limb1, limb2, limb3];
   limbArray = floor(random(0, 1));
 
   bodys = [body1, body2];
   bodyArray = floor(random(0, 1));
 
-  limbLs = [limbL1, limbL2];
+  limbLs = [limbL1, limbL2, limbL3];
   limbLArray = floor(random(0, 1));
 
   legs = [leg1, leg2, leg3];

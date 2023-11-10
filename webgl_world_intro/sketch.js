@@ -8,12 +8,14 @@ function preload() {
   // Load model with normalise parameter set to true
   pjlogo = loadModel("webgl_world_intro/models/pjlogo_dec01.obj", true);
   logoTexture = loadImage("webgl_world_intro/assets/ground.jpeg")
+  textureMode(NORMAL);
+
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
   //frameRate(10);
-
+  
   const button = createButton("Clear");
   button.position(width/2 + 50, height - 85);
   button.style("background-color", "blue"); // Set the background color to blue
@@ -29,8 +31,11 @@ function setup() {
 
 function draw() {
   orbitControl();
-  pointLight(255,255,255,0,-200,200);
-
+  //pointLight(255,255,255,0,-200,200);
+  ambientLight(128);
+  let locX = mouseX - width / 2;
+  let locY = mouseY - height / 2;
+  pointLight(0, 0, 255, locX, locY, 100);
   //earthquake camera
   // camX = random(-10,10);
   // camY = random(-10,10);
@@ -62,6 +67,9 @@ function draw() {
   normalMaterial(); // For effect
   //ambientMaterial();
   //texture(logoTexture)
+  shininess(30);
+  //specularMaterial(0, 0, 255);
+
 
   push();
     translate(0, 0, 0);
@@ -71,13 +79,16 @@ function draw() {
     rotateY(frameCount * 0.02);
     rotateZ(frameCount * 0.001);
     scale(frameCount * 0.005);
+    noStroke();
+    //fill(255,0,0);
+    //texture(logoTexture)
     model(pjlogo);
     pop();
 
   pop();
 
   
- 
+  
   // if (mouseIsPressed) {
   //   push();
   // for (let k = 0; k < 300; k+=50){

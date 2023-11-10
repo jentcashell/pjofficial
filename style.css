@@ -28,13 +28,15 @@ b{
 }
 
 body{
-    /* background: url(nmcc_obs_01.mp4);
+    background: url(images/cvml_02.png);
     background-size: 300px;
-	backdrop-filter:blur(3px); */
+	backdrop-filter:blur(3px);
     margin:0;
     padding: 0;
     height: 100vh;
+    cursor: url('images/alienpiece03.png'), auto;
 }
+
 
 /* Video Background */
 #background-video {
@@ -747,11 +749,15 @@ audio::-webkit-media-controls-panel {
 /* LOADING SCREEN */
 .loader {
     position: absolute;
+    background: radial-gradient(circle, rgba(233,253,45,1) 20%, rgba(82,34,195,0) 50%);
+    background-image: url(images/alienpiece03.png);
+    background-size: 100px 100px;
+    background-position: cover;
 
-    border: 16px solid #e600ff; /* Light grey */
-    border-top: 16px solid #f2ff00; /* Blue */
-    border-radius: 50%;
-    box-shadow: 0 0 20px 20px #e600ff;
+    /* border: 16px solid #e600ff; /* Light grey */
+    /* border-top: 16px solid #f2ff00; /* Blue */
+    /* border-radius: 50%;
+    box-shadow: 0 0 20px 20px #e600ff; */ 
     width: 100px;
     height: 100px;
     left: 45%;

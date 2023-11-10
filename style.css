@@ -34,7 +34,7 @@ body{
     margin:0;
     padding: 0;
     height: 100vh;
-    cursor: url('images/alienpiece03.png'), auto;
+    /* cursor: url('images/alienpiece03.png'), auto; */
 }
 
 

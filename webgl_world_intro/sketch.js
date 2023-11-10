@@ -12,7 +12,19 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
- 
+  //frameRate(10);
+
+  const button = createButton("Clear");
+  button.position(width/2 + 50, height - 85);
+  button.style("background-color", "blue"); // Set the background color to blue
+  button.style("font-size", "12px");
+  button.style("color", "white");
+  button.style("border-radius", "50%");
+  button.style("padding", "10px 20px");
+  button.style("box-shadow", "0 0 30px 20px rgba(0, 0, 255)");
+  button.style("border", "none");
+
+  button.mousePressed(clearCanvas);
 }
 
 function draw() {
@@ -85,3 +97,9 @@ function draw() {
   // pop();
   // }
 }
+
+function clearCanvas(){
+  clear();
+  
+}
+

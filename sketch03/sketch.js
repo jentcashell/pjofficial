@@ -1,7 +1,7 @@
 //audio reactive program
 //idea: sliders, pads, musical instrument, perlin noise controller.
 
-let img01, img02, img03, img04, img05,img06;
+let img01, img02, img03, img04, img05,img06, img07, img08;
 let sound01, sound02, sound03, sound04, sound05, sound06;
 let soundList = [];
 
@@ -32,8 +32,8 @@ function preload() {
   img04 = loadImage("sketch03/pixel fruit demon blur.png");
   img05 = loadImage("sketch03/mj_head_04.png");
   img06 = loadImage("sketch03/3dbad_tulinh.png");
-  
-
+  img07 = loadImage("images/pj_character01_02.png");
+  img08 = loadImage("images/character02b.png");
   // sound01 = loadSound("sound01.wav");
   // sound02 = loadSound("sound02.wav");
   // sound03 = loadSound("sound03.wav");
@@ -48,7 +48,7 @@ function setup() {
   colorMode(HSB,100);
   angleMode(DEGREES);
   frameRate(20);
-  imgs = [img01, img02, img03, img04, img05, img06];
+  imgs = [img01, img02, img03, img04, img05, img06, img07, img08];
   imgArray = floor(random(0, 5));
 
   sounds = [sound01, sound02, sound03, sound04, sound05, sound06];

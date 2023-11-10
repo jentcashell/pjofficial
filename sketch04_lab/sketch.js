@@ -35,6 +35,7 @@ function preload() {
   head3 = loadImage("images/pjlab_head01b.png");
   head4 = loadImage("images/pjlab_mj_head_01.png");
   head5 = loadImage("images/pjlab_mj_head_02.png");
+  // head6 = loadImage("sketch01/Painting Collage 230221 oval.png");
 
   limb1 = loadImage("images/pjlab_arm01.png");
   limb2 = loadImage("images/pjlab_arm02.png");
@@ -62,7 +63,7 @@ function setup() {
   frameRate(0.5);
 
   heads = [head1, head2, head3, head4, head5];
-  headArray = floor(random(0, 1));
+  headArray = floor(random(0, 5));
 
   limbs = [limb1, limb2, limb3];
   limbArray = floor(random(0, 1));

@@ -7,21 +7,36 @@
     <body>
         <img class="mount" src="images/planet_mountain.png">
         
+
         <img class="char_mount char04" src="images/mj_head_01.png">
         <img class="char_mount char05" src="images/mj_head_02.png">
         
-
+        <div class="hover-item" onmouseover="playSound()">
         <div class="building img07 mGlow mAnim2"></div>
         <a href="the_lab.html">
             <img class="building img07" src="images/jentian_lab_building.png">
     </a>
     <p class="mapP img07">lλbσяλƭσяy</p>
 
+
     <a href="the_earth.html">
         <img class="earth mAnim" src="images/earth_icon.png">
     </a>
 
-        
+</div>
+<audio autoplay id="hoverSound" >
+        <source src="reverse.mp3" type="audio/mp3">
+</audio>
+      
+      <script>
+        function playSound() {
+          var sound = document.getElementById("hoverSound");
+          sound.play();
+        }
+      </script>
+    
+    <script class="webgl_intro" src="webgl_world_intro/sketch.js"></script>
+
     <a href="map.html"><p class="backButton">ßå¢k †ð måþ</p></a>
     </body>
 </html>

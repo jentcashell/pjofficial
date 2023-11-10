@@ -34,7 +34,8 @@ function preload() {
   img03 = loadImage("sketch01/Painting Collage 230221 oval.png");
   img04 = loadImage("sketch01/pixel fruit demon blur.png");
   img05 = loadImage("sketch01/mj_head_04.png");
-  img06 = loadImage("sketch01/Subject02.png");
+  img06 = loadImage("images/pj_character01_02.png");
+  img07 = loadImage("images/character02b.png");
 
   sound01 = loadSound("sketch01/sound01.wav");
   sound02 = loadSound("sketch01/sound02.wav");
@@ -42,6 +43,7 @@ function preload() {
   sound04 = loadSound("sketch01/sound05.mp3");
   sound05 = loadSound("sketch01/sound06.mp3");
   sound06 = loadSound("sketch01/sound07.wav");
+  sound07 = loadSound("khen02.mp3");
 }
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -50,11 +52,11 @@ function setup() {
   colorMode(HSB,100);
   angleMode(DEGREES);
   frameRate(30);
-  imgs = [img01, img02, img03, img04, img05, img06];
-  imgArray = floor(random(0, 5));
+  imgs = [img01, img02, img03, img04, img05, img06, img07];
+  imgArray = floor(random(0, 6));
 
-  sounds = [sound01, sound02, sound03, sound04, sound05, sound06];
-  soundArray = floor(random(0, 5));
+  sounds = [sound01, sound02, sound03, sound04, sound05, sound06, sound07];
+  soundArray = floor(random(0, 6));
 
   mic = new p5.AudioIn();
   mic.start();

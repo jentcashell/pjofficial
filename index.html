@@ -15,7 +15,20 @@
     </head>
     <body>
         <div class="loader"></div>
-        <button class="pj_enter"><a href="map.html">Ꮛꮑꮦꮛꮢ Ꮑꭷꮗ</a></button>
+
+        <div class="hover-item" onmouseover="playSound()">
+            <button class="pj_enter"><a href="map.html">Ꮛꮑꮦꮛꮢ Ꮑꭷꮗ</a></button>
+    </div>
+    <audio autoplay id="hoverSound" >
+            <source src="reverse.mp3" type="audio/mp3">
+    </audio>
+          
+          <script>
+            function playSound() {
+              var sound = document.getElementById("hoverSound");
+              sound.play();
+            }
+          </script>
         
         <script class="webgl_intro" src="webgl_world_intro/sketch.js"></script>
         

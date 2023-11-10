@@ -4,9 +4,11 @@ var v_x = [];
 var v_y = [];
 var n_balles = 6;
 let img;
+let sound;
 
 function preload(){
   img = loadImage('images/mj_head_03.png');
+  sound = loadSound('khen02.mp3');
 }
 
 
@@ -47,4 +49,5 @@ function mousePressed(){
   y.push(mouseY);
   v_x.push(random(-5, 5));
   v_y.push(random(-5, 5));
+  sound.play();
 }
